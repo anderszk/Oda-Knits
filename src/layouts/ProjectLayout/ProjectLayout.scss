@@ -1,0 +1,21 @@
+
+.project-layout-container{
+    min-height: calc(100vh - 4rem - 56px);
+    padding:0 10%;
+    padding-top: calc(4rem + 56px);
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+}
+
+ .project-content {
+    padding-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    row-gap: 80px;
+    margin: auto;
+ }
