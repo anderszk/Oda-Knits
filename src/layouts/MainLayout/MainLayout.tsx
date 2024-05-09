@@ -1,10 +1,13 @@
 
-
+import './MainLayout.scss'
 
 const MainLayout = ({ children } : {children: any}) => {
   return (
-    <div className="mainlayout-container">
+    <div className="main-layout-container">
+       <h1>Hello! I am Oda Knits!</h1>
+      <div className='main-content'>
         {children}
+      </div>
     </div>
   );
 }

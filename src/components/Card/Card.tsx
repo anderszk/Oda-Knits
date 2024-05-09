@@ -8,9 +8,9 @@ interface CardProps {
     onClick: () => void;
 }
 
-const Card : React.FC<CardProps> = ({title, desc, img}) => {
+const Card : React.FC<CardProps> = ({title, desc, img, onClick}) => {
   return (
-    <div className="card-container" onClick={() => onclick}>
+    <div className="card-container" onClick={onClick}>
         <div className='card-image-container'>
             <img src={img} alt='genser' className='card-image'/>
         </div>

@@ -1,6 +1,7 @@
 
 .navbar-container{
     width: 100%;
+    margin: auto;
     height: 56px;
     position: absolute;
     top: 0;
@@ -38,8 +39,7 @@
     font-size: 1.1rem;
     transition: all .3s;
     padding: 3px 5px;
-    font-weight: 300;
-    transition: all .3s;
+    font-weight: 600;
 }
 
 .navbar-socials{
@@ -52,8 +52,14 @@
 }
 
 .navbar-logo{
+    display: flex;
+    justify-content: center;
     width:100%;
     padding: 5px 10px;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .navbar-logo-image {

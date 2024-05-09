@@ -1,4 +1,4 @@
-import { Link, NavLink, redirect } from 'react-router-dom';
+import { Link, NavLink, redirect, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
 import logo from "../../assets/logo.png"
 import { Fragment, useState } from 'react'
@@ -8,11 +8,11 @@ import { FaInstagram } from "react-icons/fa";
 const Navbar = () => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
-
+    const navigate = useNavigate();
 
     return (
         <header className="navbar-container">
-            <div className='navbar-logo'>
+            <div className='navbar-logo' onClick={() => navigate("/")}>
                 <img src={logo} className='navbar-logo-image'/>
             </div>
             <div className='navbar-links'>
