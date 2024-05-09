@@ -12,10 +12,20 @@
 }
 
 .main-content {
-    padding-top: 56px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     row-gap: 80px;
     margin: auto;
+}
+
+.quote {
+    padding-top: 56px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.main-landing{
+    height: calc(100vh - 156px - 4rem);
 }
