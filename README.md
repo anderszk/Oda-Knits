@@ -4,7 +4,7 @@ This project is to display and showcase the work of `oda.knits_` (on Instagram).
 
 
 
-##Frameworks
+## Frameworks
 
 The website is built using React.js, SCSS and MUI, and using typescript as implementation language
 
