@@ -7,16 +7,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import ProjectView from './views/ProjectView';
 import ContactView from './views/ContactView';
+import Footer from './components/Footer/Footer';
+import RootLayout from './layouts/RootLayout/RootLayout';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-          <Route path='/' element={<HomeView/>} />
-          <Route path='/projects' element={<ProjectView/>} />
-          <Route path='/contact' element={<ContactView/>} />
-      </Routes>
+      <RootLayout>
+        <Routes>
+            <Route path='/' element={<HomeView/>} />
+            <Route path='/projects' element={<ProjectView/>} />
+            <Route path='/contact' element={<ContactView/>} />
+        </Routes>
+      </RootLayout>
     </div>
   );
 }
