@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import { ToTopButton } from "../../components/ScrollToTop/ScrollToTop";
 
 
 
@@ -8,9 +9,10 @@ const RootLayout = ({children} : {children: any}) => {
   return (
     <>
         <Navbar />
-            <Box className="rootlayout-container" pb={{xs: 'calc(30vh + 6rem)', md: 'calc(20vh + 6rem)'}}>
+            <Box className="rootlayout-container" pb={{xs: 'calc(30vh + 6rem)', md: 'calc(28vh + 6rem)'}}>
             {children}
             </Box>
+        <ToTopButton/>
         <Footer />
     </>
   );

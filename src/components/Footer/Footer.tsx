@@ -11,7 +11,7 @@ const Footer = () => {
 
 
   return (
-    <Box className="footer-container" sx={{height: {xs:'25vh', md: '25vh'}}}>
+    <Box className="footer-container" sx={{height: {xs:'25vh', md: '28vh'}}}>
         <Grid container sx={{height:'calc(100% - 40px)'}}>
           <Grid item md={2} xs={6}>
             <Box className="footer-logo" onClick={() => navigate("/")}>
