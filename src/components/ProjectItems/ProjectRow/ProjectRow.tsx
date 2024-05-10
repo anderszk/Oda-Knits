@@ -24,7 +24,7 @@ const ProjectRow: React.FC<CardProps> = ({ items, category }) => {
   };
 
   return (
-    <Box pt={30} sx={{ height: { xs: '220vh', md: '80vh' } }}>
+    <Box py={15} sx={{ height: { xs: '220vh', md: '80vh' }}}>
         <Typography
           variant='h2'
           mb={{xs: 10, md: 8}}

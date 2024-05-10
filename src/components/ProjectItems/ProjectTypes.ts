@@ -8,3 +8,7 @@ export type ProjectItem = {
     images?: string[];
 }
 
+export type ProjectItemRow = {
+    items: ProjectItem[];
+    title: string;
+}

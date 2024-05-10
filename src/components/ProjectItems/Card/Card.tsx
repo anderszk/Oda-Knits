@@ -29,7 +29,7 @@ const Card : React.FC<CardProps> = ({cardInfo, onClick}) => {
      <motion.div
         animate={inView ? 'visible' : 'hidden'}
         variants={variants}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        transition={{ duration: .5, ease: 'easeOut' }}
         ref={ref}
         className="magic"
     >
