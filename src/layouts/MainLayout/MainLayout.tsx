@@ -4,6 +4,7 @@ import './MainLayout.scss'
 import Typewriter from 'typewriter-effect';
 import { PiYarn } from "react-icons/pi";
 import { motion } from "framer-motion";
+import { useRef } from 'react';
 
 
 
@@ -11,15 +12,21 @@ const MainLayout = ({ children } : {children: any}) => {
   
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const mainRef = useRef<null | HTMLDivElement>(null);
+
+
+  const scrollToView = () => {
+    mainRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
   
   return (
-    <div className="main-layout-container">
+    <div className="main-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56px)'}}>
       <div className='main-landing'>
         <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500'}}>Hello, I am Oda Knits!</Typography>
         <Box mt={15}>
           <Typewriter
             options={{
-              strings: ["I Like knitting stuff!", "Follow me on instagram @ Oda.knits_!", "Take a look at my projects for inspo!"],
+              strings: ["I like knitting stuff!", "Follow me on instagram @ oda.knits_!", "Take a look at my projects for inspo!"],
               autoStart: true,
               loop: true,
               wrapperClassName: 'typewriter',
@@ -33,19 +40,21 @@ const MainLayout = ({ children } : {children: any}) => {
             }}
           />
         </Box>
-        <Box className='main-scrolldown-container'>
+        <Box className='main-scrolldown-container' sx={{top: {xs:'75vh', md:'82vh'}}}>
           <motion.button 
           style={{fontSize: isMobile ? '2.5em' : '3em'}}
           whileHover={{
-            rotate: 120,
+            rotate: 90,
             transition: { duration: .2 },
           }}
+          whileTap={{ scale: 0.80, transition: {duration: .1} }}
+          onClick={scrollToView}
             className='main-scrolldown'>
             <PiYarn />
           </motion.button>
         </Box>
       </div>
-      <div className='main-content'>
+      <div className='main-content' ref={mainRef}>
         {children}
       </div>
     </div>

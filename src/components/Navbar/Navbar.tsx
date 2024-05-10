@@ -28,7 +28,7 @@ const Navbar = () => {
                     src={imageSrc}
                 />
             </div>
-            <Box className='navbar-links' sx={{gap:{xs:'15px', md: '40px'}, fontSize:{xs:'.9em', md: '1em'}}}>
+            <Box className='navbar-links' sx={{gap:{xs:'15px', md: '60px'}, fontSize:{xs:'.9em', md: '1em'}}}>
                 <NavLink to="/" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Home</NavLink>
                 <NavLink to="/projects" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Projects</NavLink>
                 <NavLink to="/contact" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Contact</NavLink>
