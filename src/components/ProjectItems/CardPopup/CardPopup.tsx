@@ -1,6 +1,6 @@
 import React from 'react';
 
-import genser from '../../assets/genser.png'
+import genser from '../../../assets/genser.png'
 
 import './CardPopup.scss';
 import {

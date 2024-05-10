@@ -22,7 +22,7 @@ const MainLayout = ({ children } : {children: any}) => {
   return (
     <div className="main-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56px)'}}>
       <div className='main-landing'>
-        <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500'}}>Hello, I am Oda Knits!</Typography>
+        <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Hello, I am Oda Knits!</Typography>
         <Box mt={15}>
           <Typewriter
             options={{
