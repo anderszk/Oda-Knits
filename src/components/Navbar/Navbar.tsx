@@ -1,25 +1,38 @@
 import { Link, NavLink, redirect, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
 import logo from "../../assets/logo.png"
+import logonotext from "../../assets/logo_notext.png"
 import { Fragment, useState } from 'react'
 import { FaInstagram } from "react-icons/fa";
+import { Box, useMediaQuery, useTheme } from '@mui/material';
+
 
 
 const Navbar = () => {
 
-    const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const imageSrc = isMobile ? logonotext : logo;
+
     const navigate = useNavigate();
 
     return (
         <header className="navbar-container">
             <div className='navbar-logo' onClick={() => navigate("/")}>
-                <img src={logo} className='navbar-logo-image'/>
+                <Box
+                    component="img"
+                    sx={{
+                        width: { xs:'50%', md:'60%' },
+                    }}
+                    alt="Logo"
+                    src={imageSrc}
+                />
             </div>
-            <div className='navbar-links'>
+            <Box className='navbar-links' sx={{gap:{xs:'15px', md: '60px'}, fontSize:{xs:'.9em', md: '1em'}}}>
                 <NavLink to="/" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Home</NavLink>
                 <NavLink to="/projects" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Projects</NavLink>
                 <NavLink to="/contact" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Contact</NavLink>
-            </div>
+            </Box>
             <div className='navbar-socials' onClick={() => window.open("https://instagram.com/oda.knits_/", "_blank")}>
                 <FaInstagram style={{fontSize:'1.2rem'}}></FaInstagram>
             </div>

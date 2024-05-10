@@ -1,21 +1,50 @@
 
 .main-layout-container {
-    min-height: calc(100vh - 4rem - 56px);
+    position: relative;
     padding: 0 10%;
-    padding-top: calc(4rem + 56px);
-
-    h1 {
-        font-size: 4rem;
-        font-weight: 500;
-    }
-
 }
 
 .main-content {
-    padding-top: 56px;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     row-gap: 80px;
     margin: auto;
+}
+
+.quote {
+    padding-top: 56px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.main-landing{
+    height: calc(100vh - 15rem);
+}
+
+.typewriter {
+    font-size: 1.2em;
+    padding-top: 200px
+}
+
+.typewriter_cursor {
+    font-size: 1.2em;
+}
+
+.main-scrolldown-container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.main-scrolldown{
+    transform: scale(1);
+    transition: all .4s;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--text-primary)
 }
