@@ -69,7 +69,7 @@ const ProjectView = () => {
                 <Grid item xs={12} md={6} sx={{display:'flex', alignItems: 'center'}}>
                     <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>My Projects.</Typography>
                 </Grid>
-                <Grid mt={{xs:10, md:0}} item xs={12} md={6}>
+                <Grid mt={{xs:12, md:0}} item xs={12} md={6}>
                    <Box mt={{xs: 0, md: 4}} sx={{ display: 'flex', flexDirection: 'column', alignItems: {xs:'start', md:'end'}, gap:{xs:1.5, md:2} }}>
                        {mapableProjects.map((item, index) => {
                             // eslint-disable-next-line react-hooks/rules-of-hooks

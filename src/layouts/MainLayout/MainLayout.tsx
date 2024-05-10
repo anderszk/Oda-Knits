@@ -23,7 +23,7 @@ const MainLayout = ({ children } : {children: any}) => {
     <div className="main-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56px)'}}>
       <div className='main-landing' style={{display:'flex', flexDirection:'column' ,alignItems: isMobile ? 'start' : 'center'}}>
         <Typography mt={{xs:4, md:4}} variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Hello, I am Oda Knits!</Typography>
-        <Box mt={{xs:10, md:12}}>
+        <Box mt={{xs:8, md:12}}>
           <Typewriter
             options={{
               strings: ["I like knitting stuff!", "Follow me on instagram @oda.knits_", "Take a look at my projects for inspo!", "Click the yarn ball to see more!"],
@@ -40,7 +40,7 @@ const MainLayout = ({ children } : {children: any}) => {
             }}
           />
         </Box>
-        <Box className='main-scrolldown-container' sx={{top: {xs:'75vh', md:'82vh'}}}>
+        <Box className='main-scrolldown-container' sx={{top: {xs:'72vh', md:'82vh'}}}>
           <motion.button 
           style={{fontSize: isMobile ? '2.5em' : '3em'}}
           whileHover={{
