@@ -1,7 +1,5 @@
 import ContactLayout from "../layouts/ContactLayout/ContactLayout"
 
-import { Description, Field, Fieldset, Input, Label, Legend, Select, Textarea } from '@headlessui/react'
-import clsx from 'clsx'
 import './view.scss'
 import { Grid, Typography } from "@mui/material"
 
@@ -11,11 +9,9 @@ const ContactView = () => {
     <ContactLayout>
       <Grid container>
         <Grid item xs={12} md={6} display={'flex'} alignItems={'center'}>
-          <Typography pb={10} variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Contact me!</Typography>
+          <Typography pb={12} variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Contact me!</Typography>
         </Grid>
-        <Grid item xs={12} md={6} display={'flex'} flexDirection={'column'} alignItems={'center '}>
-          <p>Heisan</p>
-          <p>Heisan</p>
+        <Grid item xs={12} md={6} display={'flex'} flexDirection={'column'} alignItems={'center'}>
           <p>Heisan</p>
           <p>Heisan</p>
           <p>Heisan</p>

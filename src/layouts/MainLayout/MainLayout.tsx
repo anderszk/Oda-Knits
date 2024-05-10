@@ -22,8 +22,8 @@ const MainLayout = ({ children } : {children: any}) => {
   return (
     <div className="main-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56px)'}}>
       <div className='main-landing' style={{display:'flex', flexDirection:'column' ,alignItems: isMobile ? 'start' : 'center'}}>
-        <Typography mt={2} variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Hello, I am Oda Knits!</Typography>
-        <Box mt={12}>
+        <Typography mt={{xs:4, md:4}} variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Hello, I am Oda Knits!</Typography>
+        <Box mt={{xs:10, md:12}}>
           <Typewriter
             options={{
               strings: ["I like knitting stuff!", "Follow me on instagram @oda.knits_", "Take a look at my projects for inspo!", "Click the yarn ball to see more!"],

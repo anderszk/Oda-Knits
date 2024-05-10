@@ -39,8 +39,8 @@ const CardPopup : React.FC<CardPopupProps> = ({ popupContent, isOpen, setIsOpen 
       <Fade in={isOpen} timeout={500}>
         <Box
           sx={{
-            height: '70vh',
-            width: '65vw',
+            height: {xs:'80vh', md:'70vh'},
+            width: {xs:'85vw', md:'65vw'},
             zIndex: 100,
             bgcolor: 'var(--background-secondary)',
             borderRadius: 8,
@@ -51,8 +51,8 @@ const CardPopup : React.FC<CardPopupProps> = ({ popupContent, isOpen, setIsOpen 
             },
             '-ms-overflow-style': 'none'
           }}>
-            <Grid container sx={{display: 'flex', height: '100%'}}>
-                <Grid item md={6}sx={{
+            <Grid container display={'flex'} sx={{height: '100%'}}>
+                <Grid item md={6} xs={12} sx={{
                     background: `url(${genser})`,
                     backgroundSize: 'contain',
                     backgroundRepeat:'no-repeat',
@@ -63,8 +63,8 @@ const CardPopup : React.FC<CardPopupProps> = ({ popupContent, isOpen, setIsOpen 
                         <p>Heisann</p>
                     </Box>
                 </Grid>
-                <Grid item md={6} sx={{backgroundColor:'var(--background-secondary)', borderRadius: 8}}>
-                    <Box sx={{height: '100&'}}>
+                <Grid item md={6} xs={12} sx={{backgroundColor:'var(--background-secondary)', borderRadius: 8}}>
+                    <Box sx={{height: '100%'}}>
                         <p>Heisann</p>
                     </Box>
                 </Grid>
