@@ -1,14 +1,8 @@
 
 .main-layout-container {
-    min-height: calc(100vh - 4rem - 56px);
+    min-height: calc(100vh);
     padding: 0 10%;
     padding-top: calc(4rem + 56px);
-
-    h1 {
-        font-size: 4rem;
-        font-weight: 500;
-    }
-
 }
 
 .main-content {
@@ -28,4 +22,13 @@
 
 .main-landing{
     height: calc(100vh - 156px - 4rem);
+}
+
+.typewriter {
+    font-size: 1.2em;
+    padding-top: 200px
+}
+
+.typewriter_cursor {
+    font-size: 1.2em;
 }
