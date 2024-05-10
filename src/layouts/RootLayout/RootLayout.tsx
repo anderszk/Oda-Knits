@@ -9,7 +9,7 @@ const RootLayout = ({children} : {children: any}) => {
   return (
     <>
         <Navbar />
-            <Box className="rootlayout-container" pb={{xs: 'calc(30vh + 6rem)', md: 'calc(28vh + 6rem)'}}>
+            <Box className="rootlayout-container" pb={{xs: 'calc(30vh + 6rem)', md: 'calc(28vh)'}}>
             {children}
             </Box>
         <ToTopButton/>

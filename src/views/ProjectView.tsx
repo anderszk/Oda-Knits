@@ -65,12 +65,12 @@ const ProjectView = () => {
     
     return (
         <ProjectLayout>
-            <Grid container pb={10}>
-                <Grid item xs={12} md={6}>
-                    <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>My Projects:</Typography>
+            <Grid container>
+                <Grid item xs={12} md={6} sx={{display:'flex', alignItems: 'center'}}>
+                    <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>My Projects.</Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                   <Box mt={{xs: 0, md: 2}} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end', gap: 2 }}>
+                   <Box mt={{xs: 0, md: 4}} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end', gap: 2 }}>
                        {mapableProjects.map((item, index) => {
                             // eslint-disable-next-line react-hooks/rules-of-hooks
                             const [hover, setHover] = useState(false); // State to manage hover
@@ -92,7 +92,7 @@ const ProjectView = () => {
                                 className="underline"
                                 initial={{ scaleX: 0 }}
                                 animate={{ scaleX: hover ? 1 : 0 }} // Animate based on hover state
-                                transition={{ duration: 0.4, ease: "easeOut" }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
                                 style={{ position: 'absolute', width: '100%', bottom: 0, left: 0, borderRadius:'100px', height: '2px', backgroundColor: 'var(--text-primary)', originX: 0 }}
                                 />
                             </Box>

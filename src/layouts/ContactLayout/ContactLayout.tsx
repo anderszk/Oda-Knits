@@ -14,10 +14,7 @@ const ContactLayout = ({children} : {children:any}) => {
 
   return (
    <div className="contact-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 2*56px)'}}>
-      <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>Contact me!</Typography>
-      <div className='contact-content'>
-        {children}
-      </div>
+      {children}
     </div>
   );
 }
