@@ -5,7 +5,7 @@ import './view.scss'
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
 
 
-const NotFound = () => {
+const NotFoundView = () => {
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -26,4 +26,4 @@ const NotFound = () => {
     );
 }
 
-export default NotFound;
+export default NotFoundView;

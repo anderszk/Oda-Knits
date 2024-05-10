@@ -7,7 +7,7 @@ import ProjectView from './views/ProjectView';
 import ContactView from './views/ContactView';
 import RootLayout from './layouts/RootLayout/RootLayout';
 import ScrollToTop from './ScrollToTop';
-import NotFound from './views/NotFound';
+import NotFoundView from './views/NotFoundView';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path='/' element={<HomeView/>} />
             <Route path='/projects' element={<ProjectView/>} />
             <Route path='/contact' element={<ContactView/>} />
-            <Route path='*' element={<NotFound />} />
+            <Route path='*' element={<NotFoundView />} />
         </Routes>
       </RootLayout>
     </div>
