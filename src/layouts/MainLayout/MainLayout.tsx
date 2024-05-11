@@ -45,7 +45,7 @@ const MainLayout = ({ children } : {children: any}) => {
             style={{fontSize: isMobile ? '2.5em' : '3em'}}
             whileHover={{
               rotate: 90,
-              transition: { duration: .2 },
+              transition: { duration: .2},
             }}
             whileTap={{ scale: 0.80, transition: {duration: .1} }}
             onClick={scrollToView}

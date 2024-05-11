@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <motion.header className="navbar-container" variants={fadeIn(2)} initial="hidden" animate="show">
-            <div className='navbar-logo' onClick={() => navigate("/")}>
+            <motion.div whileHover={{opacity: 0.8, transition: { duration: .2}}} className='navbar-logo' onClick={() => navigate("/")}>
                 <Box
                     component="img"
                     sx={{
@@ -29,15 +29,15 @@ const Navbar = () => {
                     alt="Logo"
                     src={imageSrc}
                 />
-            </div>
+            </motion.div>
             <Box className='navbar-links' sx={{gap:{xs:'15px', md: '60px'}, fontSize:{xs:'.9em', md: '1em'}}}>
                 <NavLink to="/" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Home</NavLink>
                 <NavLink to="/projects" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Projects</NavLink>
                 <NavLink to="/contact" className={({isActive}) => isActive ? "navbar-link-active" : "navbar-link"}>Contact</NavLink>
             </Box>
-            <div className='navbar-socials' onClick={() => window.open("https://instagram.com/oda.knits_/", "_blank")}>
+            <motion.div whileHover={{scale: 1.2, transition: { duration: .2}}} className='navbar-socials' onClick={() => window.open("https://instagram.com/oda.knits_/", "_blank")}>
                 <FaInstagram style={{fontSize:'1.2rem'}}></FaInstagram>
-            </div>
+            </motion.div>
         </motion.header>
     )
 }
