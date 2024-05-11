@@ -4,6 +4,7 @@ export type ProjectItem = {
     palette?: string[],
     recipe?: string;
     yarn_type?: string;
+    size?: string;
     thumbnail: string;
     images?: string[];
 }

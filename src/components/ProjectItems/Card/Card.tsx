@@ -9,6 +9,10 @@ interface CardProps {
     onClick: () => void;
 }
 
+const shorten = (s: string) => {
+  return s.length > 80 ? s.substring(0, 70) + "..." : s;
+}
+
 const Card : React.FC<CardProps> = ({cardInfo, onClick}) => {
 
   const [ref, inView] = useInView({
@@ -39,7 +43,7 @@ const Card : React.FC<CardProps> = ({cardInfo, onClick}) => {
           </div>
           <div className='card-info'>
               <h2>{cardInfo.title}</h2>
-              <p>{cardInfo.description}</p>
+              <p>{shorten(cardInfo.description)}</p>
           </div>
       </div>
     </motion.div>

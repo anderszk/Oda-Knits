@@ -12,7 +12,7 @@ const ProjectLayout = ({children} : {children: any}) => {
   }, []);
 
   return (
-    <div className="project-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56px)'}}>
+    <div className="project-layout-container" style={{paddingTop: isMobile ? 'calc(4rem + 56px)' : 'calc(4rem + 56px + 56p)'}}>
       {children}
     </div>
   );
