@@ -62,7 +62,6 @@ const ProjectView = () => {
         }
     };
 
-    
     return (
         <ProjectLayout>
             <Grid container>

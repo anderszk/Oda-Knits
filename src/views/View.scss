@@ -31,3 +31,18 @@
      background-color: var(--text-primary);
      border-radius: 100px;
  }
+
+ .typewriter_cursor_loading{font-size: 4rem; font-weight: 300}
+
+ .loader-writer{ span {
+        font-size: 4rem;
+        margin-left: 12px;
+        font-weight: 500;
+    }}
+
+ @media only screen and (max-width: 768px) {
+    .typewriter_cursor_loading {font-size: 3rem}
+    .loader-writer {
+        span {font-size: 3rem; margin-left: 0;}
+    }
+ }
