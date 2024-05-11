@@ -54,7 +54,7 @@ const ProjectRow: React.FC<CardProps> = ({ items, category }) => {
           </>
         ))}
       </Grid>
-      <CardPopup popupContent={currentProject} isOpen={isOpen} setIsOpen={closeModal} category={category}></CardPopup>
+      <CardPopup popupContent={currentProject} isOpen={isOpen} close={closeModal} category={category}></CardPopup>
     </Box>
   );
 };
