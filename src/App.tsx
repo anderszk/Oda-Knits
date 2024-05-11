@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import ProjectView from './views/ProjectView';
 import ContactView from './views/ContactView';
@@ -12,17 +12,19 @@ import LoaderView from './views/LoaderView';
 import { motion } from 'framer-motion';
 
 function App() {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+
+  const location = useLocation();
+
+  
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    isLoading
-      ? document.querySelector("body")?.classList.add("loading")
-      : document.querySelector("body")?.classList.remove("loading")
+    if (isLoading) localStorage.setItem('firstVisit', 'no')
   }, [isLoading])
 
   return (
     <>
-    { isLoading
+    { isLoading && location.pathname === '/'
         ? <LoaderView setLoading={setIsLoading}/>
         : <div className="App">
             <RootLayout>
