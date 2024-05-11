@@ -5,6 +5,8 @@ import logonotext from "../../assets/logo_notext.png"
 import { Fragment, useState } from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants/animations';
 
 
 
@@ -17,7 +19,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     return (
-        <header className="navbar-container">
+        <motion.header className="navbar-container" variants={fadeIn(2)} initial="hidden" animate="show">
             <div className='navbar-logo' onClick={() => navigate("/")}>
                 <Box
                     component="img"
@@ -36,7 +38,7 @@ const Navbar = () => {
             <div className='navbar-socials' onClick={() => window.open("https://instagram.com/oda.knits_/", "_blank")}>
                 <FaInstagram style={{fontSize:'1.2rem'}}></FaInstagram>
             </div>
-        </header>
+        </motion.header>
     )
 }
 

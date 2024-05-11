@@ -25,12 +25,12 @@
 }
 
 .typewriter {
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding-top: 200px
 }
 
 .typewriter_cursor {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .main-scrolldown-container{
@@ -47,4 +47,9 @@
     border: none;
     background-color: transparent;
     color: var(--text-primary)
+}
+
+@media only screen and (max-width: 768px) {
+    .typewriter {font-size: 1.2em;}
+    .typewriter_cursor {font-size: 1.2em}
 }
