@@ -1,5 +1,5 @@
 import { createRef, useRef, useState } from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Fade, Grid, Typography } from "@mui/material";
 import { ProjectItem, ProjectItemRow } from "../components/ProjectItems/ProjectTypes";
 
 import './view.scss'
@@ -63,52 +63,54 @@ const ProjectView = () => {
     };
 
     return (
-        <ProjectLayout>
-            <Grid container>
-                <Grid item xs={12} md={6} sx={{display:'flex', alignItems: 'center'}}>
-                    <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>My Projects.</Typography>
-                </Grid>
-                <Grid mt={{xs:12, md:0}} item xs={12} md={6}>
-                   <Box mt={{xs: 0, md: 4}} sx={{ display: 'flex', flexDirection: 'column', alignItems: {xs:'start', md:'end'}, gap:{xs:1.5, md:2} }}>
-                       {mapableProjects.map((item, index) => {
-                            // eslint-disable-next-line react-hooks/rules-of-hooks
-                            const [hover, setHover] = useState(false); // State to manage hover
-                            return (
-                            <Box
-                                key={index}
-                                sx={{ position: 'relative', display: 'inline-block' }}
-                                onMouseEnter={() => setHover(true)}
-                                onMouseLeave={() => setHover(false)}
-                            >
-                                <Button
-                                sx={{fontSize: {xs:'1.2rem', md: '1.4rem'}}}
-                                variant="contained"
-                                onClick={() => scrollToHeading(index)}
-                                className="project-menu-buttons"
+            <ProjectLayout>
+                <Fade in timeout={1000}>
+                <Grid container>
+                    <Grid item xs={12} md={6} sx={{display:'flex', alignItems: 'center'}}>
+                        <Typography variant='h1' sx={{fontSize: {xs:'3rem', md:'4rem'}, fontWeight: '500', color: 'var(--text-primary)'}}>My Projects.</Typography>
+                    </Grid>
+                    <Grid mt={{xs:12, md:0}} item xs={12} md={6}>
+                    <Box mt={{xs: 0, md: 4}} sx={{ display: 'flex', flexDirection: 'column', alignItems: {xs:'start', md:'end'}, gap:{xs:1.5, md:2} }}>
+                        {mapableProjects.map((item, index) => {
+                                // eslint-disable-next-line react-hooks/rules-of-hooks
+                                const [hover, setHover] = useState(false); // State to manage hover
+                                return (
+                                <Box
+                                    key={index}
+                                    sx={{ position: 'relative', display: 'inline-block' }}
+                                    onMouseEnter={() => setHover(true)}
+                                    onMouseLeave={() => setHover(false)}
                                 >
-                                Go to {item.title}
-                                </Button>
-                                <motion.div
-                                className="underline"
-                                initial={{ scaleX: 0 }}
-                                animate={{ scaleX: hover ? 1 : 0 }} // Animate based on hover state
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                style={{ position: 'absolute', width: '100%', bottom: 0, left: 0, borderRadius:'100px', height: '2px', backgroundColor: 'var(--text-primary)', originX: 0 }}
-                                />
-                            </Box>
-                            );
-                        })}
-                    </Box>
+                                    <Button
+                                    sx={{fontSize: {xs:'1.2rem', md: '1.4rem'}}}
+                                    variant="contained"
+                                    onClick={() => scrollToHeading(index)}
+                                    className="project-menu-buttons"
+                                    >
+                                    Go to {item.title}
+                                    </Button>
+                                    <motion.div
+                                    className="underline"
+                                    initial={{ scaleX: 0 }}
+                                    animate={{ scaleX: hover ? 1 : 0 }} // Animate based on hover state
+                                    transition={{ duration: 0.5, ease: "easeOut" }}
+                                    style={{ position: 'absolute', width: '100%', bottom: 0, left: 0, borderRadius:'100px', height: '2px', backgroundColor: 'var(--text-primary)', originX: 0 }}
+                                    />
+                                </Box>
+                                );
+                            })}
+                        </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <div className='project-content'>
-                {mapableProjects.map((item, index) => (
-                    <div ref={headingRefs.current[index]} key={index}>
-                        <ProjectRow items={item.items} category={item.title} />
-                    </div>
-                ))}
-            </div>
-        </ProjectLayout>
+                </Fade>
+                <div className='project-content'>
+                    {mapableProjects.map((item, index) => (
+                        <div ref={headingRefs.current[index]} key={index}>
+                            <ProjectRow items={item.items} category={item.title} />
+                        </div>
+                    ))}
+                </div>
+            </ProjectLayout>
     );
 }
 
